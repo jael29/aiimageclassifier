@@ -1,0 +1,91 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Prints 10 filenames from folder pet_images/
+ 1 file:              Bird_01.jpeg
+
+Filename= Bird_01.jpeg    Label= bird
+ 2 file:                Dog_01.jpg
+
+Filename= Dog_01.jpg    Label= dog
+ 3 file:                Dog_02.jpg
+
+Filename= Dog_02.jpg    Label= dog
+ 4 file:                Cup_01.jpg
+
+Filename= Cup_01.jpg    Label= cup
+{'Bird_01.jpeg': ['bird'], 'Dog_01.jpg': ['dog'], 'Dog_02.jpg': ['dog'], 'Cup_01.jpg': ['cup']}
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                   Bird_01.jpeg  label:                       bird
+ 2 key:                     Dog_01.jpg  label:                        dog
+ 3 key:                     Dog_02.jpg  label:                        dog
+ 4 key:                     Cup_01.jpg  label:                        cup
+
+     MATCH:
+
+                  Bird_01.jpeg: 
+Real:                       bird   Classifier: indigo bunting, indigo finch, indigo bird, passerina cyanea
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:              eskimo dog, husky
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: madagascar cat, ring-tailed lemur, lemur catta
+
+                    Cup_01.jpg: 
+Real:                        cup   Classifier:                     coffee mug
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                  Bird_01.jpeg: 
+Real:                       bird   Classifier: indigo bunting, indigo finch, indigo bird, passerina cyanea  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: madagascar cat, ring-tailed lemur, lemur catta  
+PetLabelDog: 1  ClassLabelDog: 0
+
+                    Cup_01.jpg: 
+Real:                        cup   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+pct_match           : 100.00
+pct_correct_dogs    : 50.00
+pct_correct_breed   : 50.00
+pct_correct_notdogs : 100.00
+
+INCORRECT Dog/NOT Dog Assignments:
+dog                 : madagascar cat, ring-tailed lemur, lemur catta:                    0
+
+** Total Elapsed Runtime: 0:0:3
+3.4489173889160156
